@@ -1,4 +1,3 @@
-
 var g_sim_logs = '';
 var g_my_login = 0;
 var g_rand_prev;
@@ -327,9 +326,25 @@ function load_board()
     if (!(g_my_login = localStorage.getItem("g_my_login")))
 	g_my_login = ''; // will means evaluation & full random
     g_rand_prev = level + hash_login(g_my_login); // initialize replayable pseudo random generator
+    g_eval_lvls = [];
     if (g_my_login == '')
-	g_eval_lvls = JSON.parse(localStorage.getItem("g_my_eval"));
-    
+    {
+	var storedEval = localStorage.getItem("g_my_eval");
+	var evalDataValid = false;
+	if (storedEval)
+	{
+	    try {
+		var candidate = JSON.parse(storedEval);
+		if (Array.isArray(candidate))
+		{
+		    g_eval_lvls = candidate;
+		    evalDataValid = true;
+		}
+	    } catch (e) {}
+	}
+	if (!evalDataValid)
+	    localStorage.setItem("g_my_eval", JSON.stringify(g_eval_lvls));
+    }
     var root = document.getElementById("root_id");
 
     hosts.forEach(elem => show_host(root, elem));
