@@ -13,9 +13,9 @@ Open the 'index.html' using a web browers, then you will be prompted with the fo
 
 <img title="Net Practice Welcome Page" alt="Net Practice Welcome Page" src="./images/NetPractice.png">
 
-Choose either *Training* or *Evaluation*. Then add your intra 42 *login* (if required) and press the button *Start*.
+Choose either *Training* or *Evaluation*. Then add your intra 42 *login* (if required) and press the button *Start!*.
 
-The next image shows an example of the exercises, further leves have Routers, Switches and connections to the Internet.
+The next image shows an example of the exercises, further leves have *routers*, *switches* and connections to the Internet.
 <img title="Level 1" alt="Level 1" src="./images/Level1.png">
 
 Click the *Check again* button to verify if the configuration is correct or not. If there is any error, the problem will be displayed in the bottom-right corner of the window, as shown below.
